@@ -1,10 +1,14 @@
+using SimpleAPI.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 {
-    // Configure services.
+    builder.Services.AddScoped<UsersService>();
+    builder.Services.AddControllers();
 }
+
 var app = builder.Build();
 {
-    // Configure the HTTP request pipeline.
+    app.MapControllers();
 }
 
 app.Run();
