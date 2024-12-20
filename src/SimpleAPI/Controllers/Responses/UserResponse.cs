@@ -3,13 +3,13 @@ using SimpleAPI.Domain;
 namespace SimpleAPI.Controllers.Responses;
 
 public record UserResponse(
-    string FirstName,
-    string LastName,
-    string Email,
-    DateOnly DateOfBirth,
-    string Gender,
-    string PhoneNumber,
-    string Address
+    string? FirstName,
+    string? LastName,
+    string? Email,
+    DateOnly? DateOfBirth,
+    string? Gender,
+    string? PhoneNumber,
+    string? Address
 )
 {
     public static UserResponse FromDomain(User user)
